@@ -45,10 +45,11 @@ var tablica = [];
 	  	}
   }
 document.write(tablica)
-
-var wybor = []
+var trafienia = [];
+var wybor = [];
 $("input[type=radio][name=number]").click(function() { 
-    var value = $(this).val(); 
+    var value = $(this).val();
+    trafienia.push(value);
     console.log(value);
     	for (var i=0; i<tablica.length; i++) {
     		if (value==tablica[i]) {
@@ -59,11 +60,12 @@ $("input[type=radio][name=number]").click(function() {
     		
     	}
 		if (wybor.length==3) {
-			alert("zatopiony");
-			alert("Agula jest geniuszem! :D")
+			console.log(trafienia.length);
+      alert("zatopiony");
+      document.write("Udało Ci się zatopić statek podejmując" + " " + trafienia.length + " " + "prób");
+
 		}
     });
-
 
 
 
